@@ -1,0 +1,248 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage[english]{babel}
+\usepackage{pifont}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{graphicx} % figuras
+\usepackage{float}
+\usepackage[font=footnotesize]{caption}
+\usepackage{wrapfig}
+\usepackage{authblk}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{latexsym}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=10mm,
+ right=20mm}
+
+%paragraph indentation
+\setlength{\parindent}{1em} 
+
+%paragraph spacing
+%\setlength{\parskip}{1em}
+
+%Line spacing
+%\renewcommand{\baselinestretch}{1.5}
+
+
+\date{}
+
+\begin{document}
+%\maketitle
+%\vspace{-1.5cm}
+\begin{flushright} Gabriela Diaz \end{flushright}
+
+\subsection*{POD-based deflation techniques for two-phase flow simulation in large
+and highly heterogeneous porous media.}
+
+\subsection*{Theory}
+
+ \subsection*{Two phase flow through porous media}\label{fpm}
+ 
+\hspace{0.5cm}When simulating two-phase flow through a porous medium, these two phases
+can be considered as separated, i.e. they are immiscible and there is no mass transfer between 
+them. 
+The contact area between the phases is known as the interface.\par
+For the modeling of two phases, we 
+usually consider one of the fluids as the wetting phase ($w$), which is more attracted to the 
+mineral particles than the other phase, known as non-wetting phase ($n$). In the case of a 
+water-oil system, water is considered
+the wetting phase. \par
+The saturation of a phase $(S_{\alpha}),$ is the fraction of void space filled with that phase
+in the 
+medium, where a zero saturation indicates that the phase is not present.
+If there are two phases present in the porous medium, these fluids fill completely 
+the empty space, this property is expressed by the following relation,
+\begin{equation}\label{eq:satrel}
+ S_n+S_w=1.
+\end{equation}\par
+The surface tension and the curvature of the interface between the fluids causes a difference 
+in pressure
+between the two phases. 
+This difference is known as the capillary pressure ($p_c$), which depends on the saturation:
+\begin{equation}\label{eq:cappress}
+ p_c(S_w)=p_n-p_w.
+\end{equation}\par
+The pressure of the non-wetting fluid is higher than the pressure of the wetting fluid, therefore, the capillary pressure is always a positive quantity. 
+The relation between the capillary pressure and the saturation is obtained as an empirical model based on experiments. 
+The capillary curve depends on the difference in pore-size 
+distributions, porosity and permeability of the medium.
+\subsection*{Relative permeability}
+\hspace{0.5cm}When modeling two phases, the permeability of each phase ($\alpha$) will be affected by the presence of the other phase. Instead of the the absolute permeability ($K$) an effective permeability ($K_\alpha$) is used for each phase. 
+The saturation-dependent relative permeability is defined as:
+$$k_{r\alpha}(S_{\alpha})=K_{\alpha}^e/K,$$
+and accounts for the change in permeability for a given phase in the presence of other phases.\par
+Due to interfacial tensions, the sum of all the phase permeabilities is less than one, i.e.
+$$\sum_{\alpha}K_{\alpha}^e<K,$$
+
+The Corey model is the simplest model possible that relates the relative permeabilities with the saturations:
+\begin{equation}\label{eq:Corey}
+\begin{aligned}
+k_{rw}=(\hat{S}_w)^{n_w}k_w^0,\qquad
+k_{ro}=(1-\hat{S}_w)^{n_n}k_o^0,\\
+\end{aligned}
+\end{equation}
+where $n_w>1$, $n_o>1$ and $k_{\alpha}^0$ are fitting parameters.\par
+As in the single-phase case, the governing equations for two-phase flow in a porous medium are the mass conservation and Darcy's law. 
+The mass balance equation for a phase $\alpha$ is given by:
+\begin{equation}\label{eq:mb2ph}
+ \frac{\partial(\phi \rho_{\alpha}S_{\alpha})}{\partial t}+\nabla \cdot ( \rho_{\alpha} \mathbf{v}_{\alpha})=\rho_{\alpha} q_{\alpha},
+\end{equation}
+and the Darcy's law reads:
+\begin{equation}\label{eq:D2ph}
+\mathbf{v}_{\alpha}=-\frac{k_{r\alpha}}{\mu_{\alpha}} {K}(\nabla p_{\alpha}-\rho_{\alpha} g \nabla z),
+\end{equation}
+where, $\rho_{\alpha}$, $\mu_{\alpha}$, $q_{\alpha}$ and $p_{\alpha}$ are the density, 
+viscosity, sources and pressure of each phase, $g$ is the gravity constant, and $z$ is the 
+depth of the reservoir.   \par
+Combining Darcy's law \eqref{eq:D2ph}, the mass balance Equation \eqref{eq:mb2ph} and using the phase mobilities\footnote{The phase mobilities ($\lambda_{\alpha}(S_{\alpha})=Kk_{r\alpha}(S_{\alpha})/\mu_{\alpha}$) are introduced to simplify notation.}; the system reads:
+\begin{equation}\label{eq:2ph}
+ \frac{\partial(\phi \rho_{\alpha}S_{\alpha})}{\partial t}-\nabla \cdot ( \rho_{\alpha} \lambda_{\alpha}(\nabla p_{\alpha}-\rho_{\alpha} g \nabla z))=\rho_{\alpha} q_{\alpha}.
+\end{equation}
+\subsection*{Incompressible two-phase flow}
+\hspace{0.5cm}In the case of incompressible flow, the porosity $\phi$ and the densities 
+$\rho_{\alpha}$ do not depend on time; therefore, Equation \eqref{eq:2ph} reduces to: 
+\begin{equation}\label{eq:2ph1}
+ \phi \frac{\partial S_{\alpha}}{\partial t}-\nabla \cdot (  \lambda_{\alpha}(\nabla p_{\alpha}-\rho_{\alpha}g \nabla z))= q_{\alpha}.
+\end{equation}\par
+A common approach to solve this problem is the fractional flow formulation, where the fractional flow function is defined as:
+\begin{equation}\label{eq:fff}f_{\alpha1}=\frac{\lambda_{\alpha1}}{\lambda_{\alpha1}+\lambda_{\alpha2}},\end{equation}
+for a two-phase system, with phases $\alpha1$ and $\alpha2$.
+\subsection*{Fractional flow formulation}
+\hspace{0.5cm}When we have a wetting (w) and a non wetting phase (n), the system of equations for an incompressible problem reads:
+\begin{align}\label{eq:2phff}
+ \phi\frac{\partial{S}_{w}}{\partial t}+\nabla \cdot  \mathbf{v}_{w}=&\phi\frac{\partial{S}_{w}}{\partial t}+\nabla \cdot ( \lambda_{w}(\nabla p_w-\rho_wg \nabla z))= q_{w},\nonumber \\
+ \phi\frac{\partial{S}_{n}}{\partial t}+\nabla \cdot \mathbf{v}_{n}=&\phi\frac{\partial{S}_{n}}{\partial t}+\nabla \cdot ( \lambda_{n}(\nabla p_n-\rho_ng \nabla z))= q_{n}.
+\end{align}\par
+To solve this system, we define the total Darcy's velocity as the sum of the velocity in the wetting and non wetting phases:
+\begin{align}\label{eq:totv}
+\mathbf{v}=\mathbf{v}_w+\mathbf{v}_n=-\lambda_{n}\nabla p_n-\lambda_{w}\nabla p_w+(\lambda_n \rho_n+\lambda_w\rho_w)g\nabla z \nonumber \\
+=-(\lambda_n+\lambda_w)\nabla p_n+\lambda_w\nabla p_c+(\lambda_n \rho_n+\lambda_w\rho_w)g\nabla z.
+\end{align}\par
+If we add the two continuity equations (System \eqref{eq:2phff}) and use the relationship $S_n+S_w=1$, we have:
+\begin{equation}\label{eq:v2ph}
+ \phi\frac{\partial( {S}_{w}+S_n)}{\partial t}+\nabla \cdot ( \mathbf{v}_{w}+\mathbf{v}_n)=  \nabla \cdot \mathbf{v}=q,
+\end{equation}
+where $q=q_n+q_w$ is the total source term. Defining the total mobility as $\lambda=\lambda_n+\lambda_w$, and using Darcy's law, Equation \eqref{eq:v2ph} becomes:
+\begin{align}\label{eq:pnw}
+-\nabla \cdot (\lambda \nabla p_n)=q-\nabla[\lambda_w\nabla p_c+(\lambda_n\rho_n+\lambda_w\rho_w)g\nabla z],
+\end{align}
+which is an equation for the pressure of the non wetting phase. This equation depends on the saturation via the capillary pressure $p_c$ and the total mobility $\lambda$.\par
+Multiplying each phase velocity by the relative mobility of the other phase and subtracting the result, together with Equation \eqref{eq:totv}, we get:
+\begin{align*}
+\lambda_n\mathbf{v}_w-\lambda_w\mathbf{v}_n&=\lambda\mathbf{v}_w-\lambda_w\mathbf{v}
+=\lambda_w\lambda_n [\nabla p_c+(\rho_w-\rho_n)g\nabla z].
+\end{align*}\par
+Therefore, for $\mathbf{v}_w$ we have
+\begin{align*}
+\mathbf{v}_w=\frac{\lambda_w}{\lambda}\mathbf{v}+\frac{\lambda_w\lambda_n}{\lambda} [\nabla p_c+(\rho_w-\rho_n)g\nabla z].
+\end{align*}\par
+Using the velocity computed above, and the fractional flow function, Equation\eqref{eq:fff}, the transport Equation \eqref{eq:mb2ph} for the wetting phase reads:
+\begin{equation}\label{eq:sw}
+ \phi\frac{\partial {S}_{w}}{\partial t}+\nabla \cdot [f_w( \mathbf{v}+\lambda_n\Delta  \rho g\nabla z)]+\nabla \cdot(f_w\lambda_n\nabla p_c)= q_w,
+\end{equation}
+where $\Delta \rho= \rho_w-\rho_n,$ is the difference in densities.
+With this approach, the system is expressed in terms of the pressure of the non wetting phase, Equation \eqref{eq:pnw}, and the saturation of the wetting phase, Equation \eqref{eq:sw}.
+In the pressure equation,
+the coupling to saturation is present via the phase mobilities and the derivative of the capillary function. For the saturation, we have an indirect
+coupling with the pressure through the total Darcy velocity. \\
+\section{Numerical methods}\label{numet}
+\subsection*{Sequential solution procedures}
+\hspace{0.5cm}To solve the system described by Equation \eqref{eq:pnw} and Equation \eqref{eq:sw}, various procedures can be used. In this work, we use the sequential procedure; where, the equations are solved separately in consecutive substeps. An unknown is fixed, e.g.
+the saturation, and the elliptic equation is solved for the pressure. Once the pressure is computed, it is used to compute the total velocity and to solve the parabolic transport (saturation) equation. 
+If the capillary pressure is zero, the transport equation becomes hyperbolic.\par
+\subsection*{Temporal discretization}
+\hspace{0.5cm}The saturation equation is time dependent. The time discretization can be performed using two schemes: implicit and explicit. In the explicit scheme, the time derivative is approximated using the solutions obtained in the previous time step, the system to solve reads:
+\begin{equation}\label{eq:wsate}
+ \phi\frac{( {S}_{w}^{n+1}-{S}_{w}^n)}{\Delta t}+\nabla \cdot [f_w({S}_{w}^n)( \mathbf{v}^n+\lambda_n\Delta  \rho g\nabla z)]+\nabla \cdot(f_w({S}_{w}^n)\lambda_n({S}_{w}^n)\nabla p_c({S}_{w}^n))= q_w^{n+1}.
+\end{equation}\par
+For the implicit solution, backward Euler discretization schemes can be used. With this scheme, Equation \eqref{eq:sw} is:
+\begin{equation}\label{eq:wsati}
+ \phi\frac{( {S}_{w}^{n+1}-{S}_{w}^n)}{\Delta t}+\nabla \cdot [f_w({S}_{w}^{n+1})( \mathbf{v}^n+\lambda_n\Delta  \rho g\nabla z)]+\nabla \cdot(f_w({S}_{w}^{n+1})\lambda_n({S}_{w}^{n+1})\nabla p_c({S}_{w}^{n+1}))= q_w^n.
+\end{equation}\par
+That can be rewritten as:
+\begin{align}\label{eq:wsati1}
+ &{S}_{w}^{n+1}-{S}_{w}^n-\frac{\Delta t}{\phi}\left(q_w-\nabla \cdot [f_w({S}_{w}^{n+1})( \mathbf{v}^n+\lambda_n\Delta  \rho g\nabla z)]\right)\nonumber \\ 
+ &+\frac{\Delta t}{\phi}\left(\nabla\cdot(f_w({S}_{w}^{n+1})\lambda_n({S}_{w}^{n+1})\nabla p_c({S}_{w}^{n+1}))\right)=0.
+\end{align}\par
+ If we use the implicit scheme, the resulting system is nonlinear, Equation \eqref{eq:wsati1}, and depends on the saturation at time step $n$ and $n+1$. The nonlinear system can be solved using, e.g. the Newton-Raphson (NR) method. \par 
+ With this method, for the $(k+1)$-th iteration we have:
+$${J}({S}^k)\delta{S}^{k+1}=-{F}({S}^k,{S}^n),
+\qquad {S}^{k+1}={S}^k+\delta {S}^{k+1},$$
+where
+\begin{align}\label{eq:wsati2}
+ {F}({S}^k,{S}^n)&={S}_{w}^{k}-{S}_{w}^n-\frac{\Delta t}{\phi}\left(q_w-\nabla \cdot [f_w({S}_{w}^{k})( \mathbf{v}^n+\lambda_n\Delta  \rho g\nabla z)]\right)\nonumber \\ 
+ &+\frac{\Delta t}{\phi}\left(\nabla\cdot(f_w({S}_{w}^{k})\lambda_n({S}_{w}^{k})\nabla p_c({S}_{w}^{k}))\right),
+\end{align}
+${J}({S}^k)=\frac{\partial {F}({S}^k,{S}^n)}{\partial {S}^k}$ is the 
+Jacobian matrix, and $\delta {S}^{k+1}$ is the NR update at iteration step $k+1$. Therefore, the linear system to solve is:\\
+\begin{equation}\label{eq:lsS}
+{J}({S}^k)\delta {S}^{k+1}={b}({S}^k).
+\end{equation}
+where ${b}({S}^k)$ is the function evaluated at iteration step $k$, ${b}({S}^k)=-{F}({S}^k,{S}^n)$.
+\subsection*{Spatial discretization}
+\hspace{0.5cm}As mentioned before, for the sequential procedure we need to solve the equation for the pressure, and later, we solve the transport equation. \par
+For the pressures, the system to solve is Equation \eqref{eq:pnw}. This equation contains only spatial derivatives that are approximated using a finite difference scheme, in particular cell central differences. We use a mesh with a uniform grid size $\Delta x$, $\Delta y$, $\Delta z$ where $(i,j,l)$ is the center 
+of the cell in the position $i$ in the $x$ direction, $j$ in the $y$ direction, and $l$ in the $z$ direction ($x_i,y_j,z_l$), and $p_{i,j,l}=p(x_i,y_j,z_l)$ is the pressure at this point.
+Using the harmonic average ($\lambda _{i-\frac{1}{2},j,l}$) for the mobility in the interface between cells 
+$(i-1,j,l)$ and $(i,j,l)$, the derivative in the $x$ direction becomes (see, e.g. \cite{Aziz79,Chen06,Jansen13, Diaz16}):
+\begin{align*}
+&\frac{\partial}{\partial x}\left(\lambda \frac{\partial p}{\partial x}\right) = \frac{ \lambda _{i+\frac{1}{2},j,l}(p_{i+1,j,l}-p_{i,j,l})-\lambda _{i-\frac{1}{2},j,l}(p_{i,j,l}-p_{i-1,j,l})}{\left( \Delta x\right)^2}+\mathscr{O}(\Delta x^2)
+\end{align*}\par
+We define the $transmissibility$ ($T_{i-\frac{1}{2},j,l}$) between grid cells $(i-1,j,l)$ and $(i,j,l)$ as:
+\begin{equation}\label{eq:htrans}
+ T_{i-\frac{1}{2},j,l}=\frac{2\Delta y \Delta z}{\mu\Delta x}
+ \lambda_{i-\frac{1}{2},j,l},
+\end{equation}  
+and Equation \eqref{eq:pnw}, together with boundary conditions, is rewritten as:
+ \begin{equation}\label{eq:cel1}
+\mathbf{T}\mathbf{p} = \mathbf{q},
+\end{equation}
+where $\mathbf{T}$ is known as the transmissibility matrix. \par
+To solve the linear system \eqref{eq:cel1} we need to define boundary conditions at all boundaries of the domain. These conditions can be prescribed pressures 
+(Dirichlet conditions), flow rates (Neumann conditions) or a combination of these (Robin conditions). To solve this system we can use direct methods, but if the system is large or ill conditioned, it is more convenient to use iterative methods.   
+\subsection*{Well model}
+\hspace{0.5cm}In reservoir simulation, besides boundary conditions, we can also have sources, that typically are fluids injected or extracted through wells or through boundaries. 
+To describe the injection or production through wells, we used the Peaceman well model. This model gives a linear relationship between the bhp and the flow rate via the productivity or injectivity index ${I}_{(i,j,l)}$ of the well. This relationship is given by: 
+\begin{equation}\label{eq:wellm}
+{q}_{(i,j,l)}={I}_{(i,j,l)}({p}_{(i,j,l)}-{p}_{bh(i,j,l)}),
+\end{equation}
+for a cell $(i,j,l)$ containing the well. In Equation \eqref{eq:wellm}, ${p}_{(i,j,l)}$ is the reservoir pressure in the cell containing the well
+and ${p}_{bh(i,j,l)}$ is a prescribed pressure inside the well.
+\subsection*{Incompressible fluid}
+\hspace{0.5cm}Combining Equation \eqref{eq:cel1} with Equation \eqref{eq:wellm} we obtain:
+ \begin{equation}\label{eq:celw1}
+\mathbf{T}\mathbf{p} = \mathbf{I}_w(\mathbf{p}-\mathbf{p}_{bh}),
+\end{equation}
+where $\mathbf{I}_w$ is a diagonal matrix containing the productivity or injectivity indices of the wells present in the reservoir. 
+ 
+
+% 
+% \section*{Acknowledgements}
+% We like to thank the 'Consejo Nacional de Ciencia y Tecnolog\'ia (CONACYT)',
+% the 'Secretar\'ia de Energ\'ia (SENER)' and the Mexican Insitute of Petroleum (IMP) which,
+% through the programs: ’Formaci\'on de Recursos Humanos Especializados para
+% el Sector Hidrocarburos (CONACYT-SENER Hidrocarburos)’ and ’Programa
+% de Captaci\'on de Talento, Reclutamiento, Evaluaci\'on y Selecci\'on de Recursos
+% Humanos (PCTRES)’, have sponsored this work
+
+ \bibliographystyle{unsrt}
+ 
+ \bibliography{/home/wagm/cortes/Localdisk/Research/bib/research}
+% 
+\newpage
+\newpage
+
+% 
+% 
+% 
+% 
+
+\end{document}

@@ -1,0 +1,122 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[utf8]{inputenc}
+
+
+
+
+\begin{document}
+
+\section*{What are the advantages and disadvantages of MOOCs?}
+by Gabriela Berenice Diaz Cortes (EAP3, Wed).
+\section*{Introduction}
+The growth in Internet use and digital resources has led to the digital learning era. 
+Informative videos, interactive software, multimedia apps and, in recent times, MOOCs, 
+Massive Online Open Courses, have gained popularity.\\
+In 2011, a free artificial-intelligence course was offered by Standford University that attracted
+160,000 students from around the world. From that time onwards, many universities have become \footnote{could this
+also be 'have been'?} interested in 
+introducing these internet-based teaching programs\cite{waldrop13}.\\
+Nowadays, in platforms like Cousera or EdX we can find courses from top world universities,
+such as Harvard, the MIT or TU Delft. 
+These courses comprise a wide range of subjects, from science, engineering and technology courses, that
+are the most popular, to courses in the field of management, humanities, and arts that have been growing in recent years.
+The courses count with a large number of digital resources such as documents, video lectures and discussion forums. 
+Most of the courses are free and a single lecture can 
+have a very large impact around the world. This way of teaching also allows the instructor to gain 
+more experience, reputation, and teaching skills. \\
+However, the interaction between the instructor and the students is minimal, there is rarely any education
+credits offered for these kind of courses. Sometimes, it is very time-consuming to produce lectures and 
+return costs are limited, furthermore, the completion rates are very low\cite{stark14}. \\
+In this essay, I will give an overview of the pros and cons of this learning method.\\\\
+
+
+Professors always want to innovate to improve\footnote{could this also be 'to innovate for the improvement of teaching'?} 
+teaching and some of them
+want to bring top universities-quality teaching to people who 
+would never otherwise be able to study at such universities.
+Daphne Koller, Profesor at Standford, wanted to promote ‘flipping’ a teaching technique 
+in which students listen to lectures at home and
+ do exercises in class. \\
+In 2007 Profesor Andrew Ng in Stanford started
+ a project to post online free lecture videos and handouts for ten of 
+Stanford’s most popular engineering courses. 
+After this, he noticed the impact of online courses.
+With the ideas introduced by Ng, Koller made videos of 8–10-minute segments
+ separated by pauses in which students had to answer questions or to solve problems. 
+Later, she noticed that interaction between the students would be useful.
+This started an online discussion forum in social-networking sites such as Facebook.
+ Koller and Ng combined their achievements and started to work on a software platform for
+ discussion forums and videos for an online course.
+ With this platform they started an artificial-intelligence course 
+for which they got 160,000 people registered from 195 countries, this marked 
+the beginning of the MOOCs era.\\
+MOOCs courses typically integrate social networking and are
+characterized by the provision of online resources. MOOCs are
+often facilitated by an acknowledged expert in the field. In 2013
+only 13\% of all higher education institutions offered a MOOC, but
+43\% plan to offer MOOCs by 2016. \\Some educators surveyed believe that MOOCs 
+could complement the education offered by higher education institutions.
+
+MOOCs have a significant number of advantages. 
+One of the greatest benefits of MOOCs is their accessibility. 
+These courses are usually low cost or free. They have flexibility of access, for example, 
+for students who do not have access to higher education, because they lack financial 
+resources or they have difficult working hours. The courses can be accessed anytime and anywhere.
+The courses can be used by any number of students and are not limited to
+college students, also professionals, younger students and the general public can 
+participate as there is no need for prerequisites.
+For younger students, they offer a way to know if they are interested in a
+subject without large investment (tuition fees).\\
+The students who take part in a MOOC develop lifelong learning skills because they are
+encouraged to be aware of their own learning, and usually they develop an interest
+in continuing their professional development. 
+Student engagement can  be enhanced if the instructors recognize the learning styles of
+students and establish good teaching strategies.
+The challenges of MOOCs, as new technology, and a large 
+numbers of students may encourage pedagogical development.
+
+MOOCs have disadvantages as well. The accessibility 
+of these courses, for example, may lead to some problems. Some people argue that  
+MOOCs might not be well suited to all students, maybe only to highly motivated students with 
+good studying skills, who could benefit from MOOCs. This theory is supported by the low rate 
+of completion (around 4\%).
+It is also thought that not all disciplines are
+suitable for online studying.\\
+The flexibility of access could also have negative consequences. For students, attending a MOOC 
+can make it difficult to find a group of students
+to find encouragement and endure long enough to pass the course. The online format
+and the possibility of working at home, or anywhere, can be a distracting factor 
+and could influence the effectiveness of the course.
+For teachers, giving a MOOC course can be very challenging. 
+The course material may need to be constantly
+updated and this entail considerable time and effort. 
+Detecting plagiarism or cheating could be very difficult too.\\
+Furthermore, they think that there is lack of personal
+connection which is very important for teaching-learning processes.
+Some students might take the course just out of curiosity and even if they learn from it,
+they will not be engaged in it\footnote{with it?}.\\
+Finally, the studies performed online are not always accepted as formal studies, 
+which can affect the professional lives of students. 
+\newpage
+\section*{Conclusion}
+Higher education has changed over the course of time and constantly adapts to culture and 
+technology.\\
+Nowadays, there is an increasing demand for higher education, but the number of institutions is not 
+increasing at the same rate. MOOCs offer an alternative allowing a large number of
+students to enroll in popular courses at top universities around the world. There are great expectations
+about the possibilities provided by MOOCS and a large number of universities are looking forward to developing their own courses.\\
+Even if a lot of people can benefit from these courses, there are still issues to solve. 
+The low completion rates show that it is not easy to all the students to follow the course 
+to the end.
+It is thought that the main problem is the poor interaction of the teacher with the students, 
+and between students. and as it is open for all public, the poor background could lead to a failure.\\
+For the teachers, this could be very time-consuming and the benefits could be smaller compared with
+the effort they put in, then they need to consider if it is a good option.\\
+It is worth notice that this is a new teaching method and it has to be further investigated to
+obtain all the benefits from it. The researches on this topic could lead to 
+a very useful teaching method and might also help to develop better tools for 
+the conventional teaching methods. 
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+\end{document}          

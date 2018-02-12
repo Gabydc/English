@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{Barone09}
+{M. Barone; I.Kalashnikova; M. Brake and D. Segalman}.
+\newblock {Reduced order modeling of fluid/structure interaction}.
+\newblock {\em {Sandia National Laboratories Report, SAND No}}, {7189}, {2009}.
+
+\bibitem{Kala14}
+{I. Kalashnikova; S. Arunajatesan; M.F. Barone; B.G. van Bloemen Waanders and
+  J.A. Fike }.
+\newblock {Reduced order modeling for prediction and control of large-scale
+  systems}.
+\newblock {\em {Sandia National Laboratories Report, SAND}}, ({2014-4693}),
+  {2014}.
+
+\bibitem{Mark06}
+R.~Markovinovi{\'c} and J.D. Jansen.
+\newblock {Accelerating iterative solution methods using reduced-order models
+  as solution predictors.}
+\newblock {\em International journal for numerical methods in engineering},
+  68(5):525--541, 2006.
+
+\bibitem{Pasetto16}
+{M. Pasetto; M. Ferronato and M. Putti}.
+\newblock {A reduced order model-based preconditioner for the efficient
+  solution of transient diffusion equations}.
+\newblock {\em {International Journal for Numerical Methods in Engineering}},
+  {2016}.
+
+\bibitem{Carlberg15}
+{Carlberg, Kevin and Forstall, Virginia and Tuminaro, Ray}.
+\newblock {Krylov-subspace recycling via the POD-augmented conjugate-gradient
+  algorithm}.
+\newblock {\em {arXiv preprint arXiv:1512.05820}}, {2015}.
+
+\bibitem{Astrid11}
+P.~Astrid; G. Papaioannou;~J.C. Vink and J.D. Jansen.
+\newblock {Pressure Preconditioning Using Proper Orthogonal Decomposition.}
+\newblock In {\em 2011 SPE Reservoir Simulation Symposium, The Woodlands,
+  Texas, USA}, January 2011.
+
+\bibitem{Vuik99}
+C.~Vuik;~A. Segal and J.~A. Meijerink.
+\newblock {An Efficient Preconditioned CG Method for the Solution of a Class of
+  Layered Problems with Extreme Contrasts in the Coefficients.}
+\newblock {\em Journal of Computational Physics}, 152:385, 1999.
+
+\end{thebibliography}

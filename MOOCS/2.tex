@@ -1,0 +1,75 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\section{Other problems}
+The number and values of wells has been changed the table 2 shows the values for each problem.
+\begin{table}[!]
+\begin{tabular}{ |p{1.5cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}| p{1.2cm}| p{1.2cm}|} 
+ \hline
+  Problem  & 1& 2 & 3& 4&5&original\\
+  \hline
+  Wells&&&&&&\\
+  \hline
+
+  1 & -200 &-200&  -50 &  -50&-300 &-200\\ 
+   2 & 0 & -200&  0 &  -50 &-500& -200\\ 
+  3 & 0 & 0&  0&  0 &-400 &-200\\ 
+4 & 0 & 0& 0 &  0&-700&-200\\ 
+5& 500& 500& 20 &  20&600 &500\\ 
+\hline
+\end{tabular}
+\caption{Configuration of the problems}
+\end{table}
+\begin{table}[!]
+\begin{tabular}{ |p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}| p{1.5cm}| } 
+ \hline
+  Problem  & 1& 2 & 3& 4&5\\
+  \hline
+  Deflation vectors&&&&&\\
+  \hline
+  1 & 42 & 46&  38 &  35 &42 \\ 
+   4 & 43 & 43&  43 &  43 &42 \\ 
+  5 & 548 & 63&  38 &  44 &59 \\ 
+ICCG & 110 & 109& 121 &  118&121 \\ 
+\hline
+\end{tabular}
+\caption{Number of iterations for DICCG, different number of snapshots, tol $10^{-1}$}
+\end{table}
+\begin{table}[!]
+\begin{tabular}{ |p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}| p{1.5cm}| } 
+ \hline
+  Problem  & 1& 2 & 3& 4&5\\
+  \hline
+  Deflation vectors&&&&&\\
+  \hline
+  1 & 42 & 46&  38 &  34 &42 \\ 
+   4 & 42 & 42&  43 &  43 &42 \\ 
+  5 & 5 & 5&  5 &  5 &5 \\ 
+ICCG & 110 & 109& 121 &  118&121 \\ 
+\hline
+\end{tabular}
+\caption{Number of iterations for DICCG, different number of snapshots, tol $10^{-5}$}
+\end{table}
+\begin{table}[!]
+\begin{tabular}{ |p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}| p{1.5cm}| } 
+ \hline
+  Problem  & 1& 2 & 3& 4&5\\
+  \hline
+  Deflation vectors&&&&&\\
+  \hline
+  1 & 42 & 46&  38 &  34 &42 \\ 
+   4 & 42 & 42&  43 &  43 &42 \\ 
+  5 & 5 & 5&  5 &  5 &5 \\ 
+ICCG & 110 & 109& 121 &  118&121 \\ 
+\hline
+\end{tabular}
+\caption{Number of iterations for DICCG, different number of snapshots, tol $10^{-10}$}
+\end{table}
+
+\end{document}

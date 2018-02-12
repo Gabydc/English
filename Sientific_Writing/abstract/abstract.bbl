@@ -1,0 +1,60 @@
+\begin{thebibliography}{1}
+
+\bibitem{Saad03}
+Y.~Saad.
+\newblock {\em {Iterative Methods for Sparse Linear Systems.}}
+\newblock Society for Industrial and Applied Mathematics Philadelphia, PA, USA.
+  2nd edition, 2003.
+
+\bibitem{Benzi02}
+{M. Benzi}.
+\newblock {Preconditioning techniques for large linear systems: a survey}.
+\newblock {\em {Journal of computational Physics}}, {182}({2}):{418--477},
+  {2002}.
+
+\bibitem{Astrid11}
+{P. Astrid, G. Papaioannou, J.C. Vink and J.D. Jansen}.
+\newblock {Pressure Preconditioning Using Proper Orthogonal Decomposition.}
+\newblock In {\em {2011 SPE Reservoir Simulation Symposium, The Woodlands,
+  Texas, USA}}, 2011.
+
+\bibitem{Mark06}
+{R. Markovinovi{\'c} and J.D. Jansen}.
+\newblock {Accelerating iterative solution methods using reduced-order models
+  as solution predictors.}
+\newblock {\em International journal for numerical methods in engineering},
+  68(5):525--541, 2006.
+
+\bibitem{Pasetto16}
+{D. Pasetto, M. Ferronato and M. Putti}.
+\newblock {A reduced order model-based preconditioner for the efficient
+  solution of transient diffusion equations}.
+\newblock {\em {International Journal for Numerical Methods in Engineering}},
+  {109}({8}):{1159--1179}, {2017}.
+
+\bibitem{Saad00}
+Yousef Saad, Manshung Yeung, Jocelyne Erhel, and Fr{\'e}d{\'e}ric Guyomarc'h.
+\newblock A deflated version of the conjugate gradient algorithm.
+\newblock {\em SIAM Journal on Scientific Computing}, 21(5):1909--1926, 2000.
+
+\bibitem{Vuik99}
+{C. Vuik, A. Segal and J.A. Meijerink}.
+\newblock {An Efficient Preconditioned CG Method for the Solution of a Class of
+  Layered Problems with Extreme Contrasts in the Coefficients.}
+\newblock {\em Journal of Computational Physics}, 152:385, 1999.
+
+\bibitem{Diaz17}
+{G.B. Diaz Cortes, C. Vuik and J.D. Jansen}.
+\newblock {On POD-based Deflation Vectors for DPCG applied to porous media
+  problems}.
+\newblock {\em {Journal of Computational and Applied Mathematics}},
+  {330}({Supplement C}):{193 -- 213}, {2018}.
+
+\bibitem{Diaz16_E}
+{G.B. Diaz Cortes, C. Vuik and J.D. Jansen}.
+\newblock {Physics-based Pre-conditioners for Large-scale Subsurface Flow
+  Simulation}.
+\newblock In {\em {Proceedings of the 15th European Conference on the
+  Mathematics of Oil Recovery, ECMOR XV}}, 2016.
+
+\end{thebibliography}

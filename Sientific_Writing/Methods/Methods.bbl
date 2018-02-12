@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{Aziz79}
+{K. Aziz and A. Settari}.
+\newblock {\em {Petroleum reservoir simulation}}.
+\newblock {Chapman \& Hall}, {1979}.
+
+\bibitem{Chen06}
+{Z. Chen, G. Huan and Y. Ma}.
+\newblock {\em {Computational methods for multiphase flows in porous media}}.
+\newblock {SIAM}, {2006}.
+
+\bibitem{Jansen13}
+{J.D. Jansen}.
+\newblock {\em {A systems description of flow through porous media.}}
+\newblock Springer, 2013.
+
+\bibitem{Diaz16}
+{G.B. Diaz Cortes, C. Vuik and J.D. Jansen}.
+\newblock {Physics-based pre-conditioners for large-scale subsurface flow
+  simulation}.
+\newblock Technical report, {Delft University of Technology, Department of
+  Applied Mathematics}, {03} {2016}.
+
+\end{thebibliography}

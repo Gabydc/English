@@ -1,0 +1,121 @@
+\begin{thebibliography}{10}
+
+\bibitem{Vermeulen04}
+{P.T.M. Vermeulen, A.W. Heemink and C.B.M. Te Stroet}.
+\newblock {Reduced models for linear groundwater flow models using empirical
+  orthogonal functions.}
+\newblock {\em Advances in Water Resources}, 27(1):57--69, 2004.
+
+\bibitem{Kerschen05}
+Gaetan Kerschen, Jean-claude Golinval, Alexander~F Vakakis, and Lawrence~A
+  Bergman.
+\newblock The method of proper orthogonal decomposition for dynamical
+  characterization and order reduction of mechanical systems: an overview.
+\newblock {\em Nonlinear dynamics}, 41(1):147--169, 2005.
+
+\bibitem{Pasetto16}
+{D. Pasetto, M. Ferronato and M. Putti}.
+\newblock {A reduced order model-based preconditioner for the efficient
+  solution of transient diffusion equations}.
+\newblock {\em {International Journal for Numerical Methods in Engineering}},
+  {109}({8}):{1159--1179}, {2017}.
+
+\bibitem{Schilders08}
+Wilhelmus~HA Schilders, Henk~A Van~der Vorst, and Joost Rommes.
+\newblock {\em Model order reduction: theory, research aspects and
+  applications}, volume~13.
+\newblock Springer, 2008.
+
+\bibitem{Quarteroni14}
+{A. Quarteroni and G. Rozza}.
+\newblock {\em {Reduced order methods for modeling and computational
+  reduction}}, volume~{9}.
+\newblock {Springer}, {2014}.
+
+\bibitem{Carlberg15}
+{K. Carlberg, V. Forstall, and R. Tuminaro}.
+\newblock {Krylov-subspace recycling via the POD-augmented conjugate-gradient
+  algorithm}.
+\newblock {\em {arXiv preprint arXiv:1512.05820}}, {2015}.
+
+\bibitem{Astrid11}
+{P. Astrid, G. Papaioannou, J.C. Vink and J.D. Jansen}.
+\newblock {Pressure Preconditioning Using Proper Orthogonal Decomposition.}
+\newblock In {\em {2011 SPE Reservoir Simulation Symposium, The Woodlands,
+  Texas, USA}}, 2011.
+
+\bibitem{Mark06}
+{R. Markovinovi{\'c} and J.D. Jansen}.
+\newblock {Accelerating iterative solution methods using reduced-order models
+  as solution predictors.}
+\newblock {\em International journal for numerical methods in engineering},
+  68(5):525--541, 2006.
+
+\bibitem{Mark09}
+R.~Markovinovi{\'c}.
+\newblock {\em {System-Theoretical Model Reduction for Reservoir Simulation and
+  Optimization}}.
+\newblock PhD thesis, Delft University of Technology, 2009.
+
+\bibitem{Cardoso09}
+{M.A. Cardoso, L.J. Durlofsky and P. Sarma}.
+\newblock {Development and application of reduced-order modeling procedures for
+  subsurface flow simulation}.
+\newblock {\em {International journal for numerical methods in engineering}},
+  {77}({9}):{1322--1350}, {2009}.
+
+\bibitem{Heijn04}
+{T. Heijn, R. Markovinovic, J.D. Jansen et al.}
+\newblock {Generation of low-order reservoir models using system-theoretical
+  concepts}.
+\newblock {\em SPE Journal}, 9(02):202--218, 2004.
+
+\bibitem{Doren06}
+{J. van Doren, R. Markovinovi{\'c} and J.D. Jansen}.
+\newblock {Reduced-order optimal control of water flooding using proper
+  orthogonal decomposition}.
+\newblock {\em {Computational Geosciences}}, {10}({1}):{137--158}, {2006}.
+
+\bibitem{Diaz17}
+{G.B. Diaz Cortes, C. Vuik and J.D. Jansen}.
+\newblock {On POD-based Deflation Vectors for DPCG applied to porous media
+  problems}.
+\newblock {\em {Journal of Computational and Applied Mathematics}},
+  {330}({Supplement C}):{193 -- 213}, {2018}.
+
+\bibitem{Saad00}
+Yousef Saad, Manshung Yeung, Jocelyne Erhel, and Fr{\'e}d{\'e}ric Guyomarc'h.
+\newblock A deflated version of the conjugate gradient algorithm.
+\newblock {\em SIAM Journal on Scientific Computing}, 21(5):1909--1926, 2000.
+
+\bibitem{Vuik99}
+{C. Vuik, A. Segal and J.A. Meijerink}.
+\newblock {An Efficient Preconditioned CG Method for the Solution of a Class of
+  Layered Problems with Extreme Contrasts in the Coefficients.}
+\newblock {\em Journal of Computational Physics}, 152:385, 1999.
+
+\bibitem{Vuik02}
+{C. Vuik, A. Segal, L. Yaakoubi and E. Dufour}.
+\newblock {A comparison of various deflation vectors applied to elliptic
+  problems with discontinuous coefficients.}
+\newblock {\em Applied Numerical Mathematics}, 41(1):219--233, 2002.
+
+\bibitem{Tang08}
+J.~Tang.
+\newblock {\em {Two-Level Preconditioned Conjugate Gradient Methods with
+  Applications to Bubbly Flow Problems}}.
+\newblock PhD thesis, Delft University of Technology, 2008.
+
+\bibitem{Tang09}
+{J.M. Tang, R. Nabben, C. Vuik and Y. Erlangga}.
+\newblock Comparison of two-level preconditioners derived from deflation,
+  domain decomposition and multigrid methods.
+\newblock {\em Journal of scientific computing}, 39(3):340--370, 2009.
+
+\bibitem{Kahl17}
+K~Kahl and H~Rittich.
+\newblock The deflated conjugate gradient method: Convergence, perturbation and
+  accuracy.
+\newblock {\em Linear Algebra and its Applications}, 515:111--129, 2017.
+
+\end{thebibliography}

@@ -1,0 +1,25 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{geometry,graphicx,multirow,algorithm,algorithmic,amsmath,dsfont,tikz,subfigure,lscape,array,listings,textcomp,hyperref,color,amsthm}
+\geometry{a4paper}
+\usetikzlibrary{shapes,calc}
+\setlength{\parindent}{0pt}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\baselinestretch}{2}
+
+\begin{document}
+
+\begin{center}
+Conclusion
+\end{center}
+
+In this essay I have examined two different priorities of large multinational corporations: social responsibility and the increase of profits. % 20
+On the one hand, earnings are very important, in order to satisfy shareholders, and a company should gain money, in order to help the poor. % 25
+In addition, it is highly questionable whether corporations implement social responsibilty programmes to improve the quality of live of their employees, or to improve public relations. % 26
+On the other hand, there are several reasons why social responsibility should come before profits. % 15
+From an ethical point of view, companies should respect the basic human rights of their employees. % 16
+Furthermore, good working and living conditions can increase production standards, whereas focussing on profits can harm reputations. % 17
+Overall, I would claim that large mulitnational corporations have to prioritize their social responsibility, and the increase of their profits should be less important. % 24
+
+Word count: 143 words. WA3, Thea Vuik, 863037
+\end{document}

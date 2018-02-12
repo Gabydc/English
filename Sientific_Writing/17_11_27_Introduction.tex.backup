@@ -1,0 +1,57 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{setspace}
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+%\setstretch{1.1}
+
+% Title Page
+\title{}
+\author{}
+
+
+\begin{document}
+
+
+\section*{Introduction}
+
+\hspace{0.5cm}Reservoir simulation involves the solution of a set of partial differential equations
+which, often, lead to a system of linear equations. When simulating two phases, the solution of 
+the pressure equation is the most time-consuming part, especially in the cases where the system is 
+large or ill-conditioned. Furthermore, if it is required to compute a large number of simulations,
+the solution of this problem becomes expensive. Therefore, techniques to improve the 
+simulation speed are required.\\
+Reduced Order Models (ROM) have been studied to reduce the dimension of the system, by capturing 
+relevant information and using it to project high-dimensional data into a lower-dimension 
+space \cite{Vermeulen04,Kerschen05,Pasetto16,Schilders08,Quarteroni14,Carlberg15}. These methods 
+show that essential information of the system can be captured by computing a set of basis 
+functions based on solutions of the system. These solutions are known as 'snapshots', where the relevant information of the system is stored for later use.\\
+Proper Orthogonal Decomposition (POD) is a ROM method that has been studied in recent years to 
+accelerate the solution of the pressure equation, resulting from reservoir simulation 
+\cite{Astrid11,Mark06, Mark09,Cardoso09,Heijn04,Doren06}, among other applications. 
+With POD procedures, only few basis functions are necessary. The basis is such that it contains most of the variation of the original system \cite{Cardoso09,Kerschen05}. Hence, the system can be 
+represented in terms of this basis. 
+Once the basis is obtained, the POD method can be used in different ways. For the 
+solution of a large-scale system, Markovinovic et al. \cite{Mark06} propose the use of POD techniques to compute a good 
+initial guess that accelerates the solution of an iterative method. The
+solution of the problem in the small-scale domain and the projection back to the large-scale system
+is also approached by Astrid et al. \cite{Astrid11}. Pasetto et al. \cite{Pasetto16} propose the use of this basis for the construction of a preconditioner. Diaz Cortes et al. \cite{Diaz17} propose the use of the POD basis as deflation matrix.\\
+If the system is not only large but also ill-conditioned (containing large variations in the coefficients), some Krylov subspace iterative
+methods are also used \footnote{Given a linear system $\mathbf{A}\mathbf{x}=\mathbf{b}$, and the initial residual $\mathbf{r}^0=\mathbf{b}-\mathbf{A}\mathbf{x}^0$, with $\mathbf{x}^0$ an initial guess of $\mathbf{x}$, we define the Krylov subspace as
+$\mathcal{K}_k(\mathbf{A},\mathbf{r}^0)=span\{\mathbf{r}^0,\mathbf{A}\mathbf{r}^0,\dots,\mathbf{A}^{k-1}\mathbf{r}^0\}$ \cite{Saad00}. That is, the set of linear combinations of powers of $\mathbf{A}$ times $\mathbf{r}^0$. }.  The speed of convergence of these 
+methods depends on the condition number and the right-hand side of the system. If the condition 
+number is very large, some techniques can be implemented to reduce it. Commonly, preconditioners (matrices modifying the original system) are used. These matrices, in 
+general, are cheap to compute and they cluster the eigenvalues of the original system, which transforsm the system into a better conditioned one.\\ In recent years, deflation techniques have been approached for the acceleration of the convergence of Krylov subspace methods \cite{Vuik99,Vuik02,Tang08,Tang09,Kahl17}. For a good performance of this 
+method, a deflation subspace needs to be found, such that, the smallest eigenvalues of the 
+system are no longer present and the iterative method is be accelerated. In this work, we use POD techniques to 
+construct the above-mentioned deflation subspace for the solution of two-phase flow problems in highly heterogeneous porous media. \\
+\small
+ \bibliographystyle{unsrt}
+ \newpage
+ \bibliography{/home/wagm/cortes/Localdisk/Research/bib/research}
+\end{document}          

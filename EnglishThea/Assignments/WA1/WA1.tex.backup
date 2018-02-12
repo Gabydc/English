@@ -1,0 +1,22 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{geometry,graphicx,multirow,algorithm,algorithmic,amsmath,dsfont,tikz,subfigure,lscape,array,listings,textcomp,hyperref,color,amsthm}
+\geometry{a4paper}
+\usetikzlibrary{shapes,calc}
+\setlength{\parindent}{0pt}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\baselinestretch}{2}
+
+\begin{document}
+
+\begin{center}
+ Writing Assignment 1
+\end{center}
+
+\bigskip
+Today, most of the large international companies not only want to increase their profits, but also need to behave in a socially responsible manner.
+
+Word count: ... words
+
+Thea Vuik, 863037
+\end{document}

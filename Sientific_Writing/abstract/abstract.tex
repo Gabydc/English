@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pifont}
+\usepackage{a4wide}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+%\usepackage{natbib}
+\usepackage{graphicx} % figuras
+%\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{float}
+\usepackage[font=footnotesize]{caption}
+\usepackage{wrapfig}
+\usepackage{authblk}
+\usepackage{subfigure}
+
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage[sort&compress]{natbib}
+
+\setlength{\parindent}{1em} 
+
+\topmargin=-2pt
+\title{POD-based deflation techniques for the solution of two-phase flow problems in large and highly heterogeneous porous media.}
+
+\author[1]{G. B. Diaz Cortes}  
+%\author[1]{C. Vuik} 
+%\author[2]{J. D. Jansen} 
+\date{}
+%\affil[1]{Department of Applied Mathematics, TU Delft}
+%\affil[2]{Department of Geoscience \& Engineering, TU Delft}
+\renewcommand\Authands{ and }
+%\date{April 2017}
+
+
+\begin{document}
+% \thispagestyle{empty}
+% \noindent
+% \begin{center}
+% {\Large \sc DELFT UNIVERSITY OF TECHNOLOGY}
+% \\
+% \vspace{3cm}
+% {\large \sc REPORT 17-01}\\[4ex]
+% {\large \sc On POD-based Deflation Vectors for DPCG applied to porous media problems.}\\[4ex]
+% {\large \sc G. B. Diaz Cortes, C. Vuik, J. D. Jansen}\\
+% \vfill
+% {\tt ISSN 1389-6520}\\[2ex]
+% {\tt Reports of the Delft Institute of Applied Mathematics}\\[2ex]
+% {\tt Delft 2017}
+% \end{center}
+% \pagebreak
+% \thispagestyle{empty}
+% \vspace*{\fill}
+% \noindent
+% \hspace*{-0,3cm}Copyright~~~\Pisymbol{psy}{227}~~~2017 by Delft Institute of Applied Mathematics, Delft, \mbox{The Netherlands.}
+% \\[2ex]
+% No part of the Journal may be reproduced, stored in a retrieval system, or
+% transmitted, in any form or by any means, electronic, mechanical, photocopying,
+% recording, or otherwise, without the prior written permission from Delft Institute of
+% Applied Mathematics, Delft University of Technology, The
+% Netherlands. 
+% % newpage, title etc.
+% \setcounter{page}{1}
+\newpage
+\maketitle
+\begin{abstract}
+
+\hspace{0.5cm}Simulation of two-phase flow through highly heterogeneous porous media results in ill-conditioned large systems of linear equations for the pressure when using, e.g., sequential procedures.
+      Solving the resulting linear system can be particularly time-consuming. Therefore, there have been extensive efforts finding effective ways to address this issue.\par
+      Iterative methods, together with preconditioning techniques \cite{Saad03,Benzi02}, are the most commonly chosen to solve this kind of problem. In the literature, we can also find Reduced Order Models (ROM) \cite{Astrid11,Mark06,Pasetto16} and deflation methods \cite{Saad00,Vuik99} where system information is reused to find a good approximation more quickly. For the deflation techniques, an optimal selection of deflation vectors is crucial for a good performance. These vectors are collected mainly via recycling deflation (vectors containing previous solutions); subdomain deflation
+      (vectors constructed based on geometric properties); and restriction and prolongation matrices, obtained with multigrid and multilevel methods.\par
+      The construction of deflated vectors based on information captured with ROM, in particular, Proper Orthogonal Decomposition (POD) was presented by Diaz et al. \cite{Diaz17,Diaz16_E}. 
+      The goal of this work is to further explore the possibilities of combining POD and deflation techniques to speed-up the convergence of iterative methods. We propose selecting deflation vectors based on ROM methods; in particular, we focous on Proper Orthogonal Decomposition (POD). \par
+     The convergence properties of the resulting POD-based deflation method are studied for an incompressible two-phase flow problem in a highly heterogeneous porous medium. We compare the number of iterations required to solve the above-mentioned problem using the Conjugate Gradient method preconditioned with Incomplete Cholesky (ICCG), against the deflated (DICCG) version of the same method.\par
+     The efficiency of the method is illustrated with the SPE 10 benchmark problem, presenting a contrast in permeability coefficients of $\mathcal{O}(10^7)$ and containing $\mathcal{O}(10^6)$ cells. For this problem, the DICCG method requires only $\sim 30\%$ of the number of ICCG iterations. 
+
+
+
+\end{abstract}
+ \newpage
+ \bibliographystyle{unsrt}
+ \newpage
+ \bibliography{/home/wagm/cortes/Localdisk/Research/bib/research}
+
+
+\end{document}

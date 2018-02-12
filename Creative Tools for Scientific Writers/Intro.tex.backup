@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{natbib}
+\usepackage{graphicx} % figuras
+\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{float}
+\usepackage[font=footnotesize]{caption}
+\usepackage{wrapfig}
+\usepackage{authblk}
+\usepackage{subfigure}
+\usepackage{pifont}
+\usepackage{a4wide}
+\usepackage[ margin=1in]{geometry}
+\topmargin=-2pt
+
+\numberwithin{equation}{section}
+%\usepackage{lipsum}
+\topmargin=-2pt
+\title{Creative Tools for Scientific Writing, \\Preparatory assignment 1}
+
+\author{G. B. Diaz Cortes}  
+% \affil[1]{Department of Applied Mathematics, TU Delft}
+% \affil[2]{Department of Geoscience \& Engineering, TU Delft}
+%\renewcommand\Authands{ and }
+\date{November 2016}
+\begin{document}
+
+
+
+% Title Page
+
+\maketitle
+
+
+  \section{Introduction.}
+  \hspace{0.5cm}Often, most computational time in the simulation of multiphase flow through porous media is taken 
+  up by the
+solution of the pressure equation. This involves solving large systems of linear equations as 
+part of the iterative solution of the time and space discretized governing nonlinear partial differential 
+equations. The time spent in solving the linear systems depends on the size of the problem and the 
+variations of permeability within the medium. Solution of large-cale problems or problems with extreme contrasts in the
+permeability values may lead to very large computing times. 
+Iterative methods are known to be the best option to solve the above mentioned problems. However, sometimes the iterative methods are not 
+sufficient to solve these problems in a reasonable amount of time and finding a way to accelerate the convergence of these methods becomes neccesary. \\
+Preconditioners and Reduced Order Models (ROM) have been studied as tools to improve computational efficiency \cite{Barone09,Kala14} for problems involving large variations of permeability. Among ROM methods,
+Proper Orthogonal Decomposition (POD) has been investigated in \cite{Mark06,Pasetto16,Carlberg15} with encouraging results. 
+The use of a POD-based preconditioner for the acceleration of the solution is proposed by Astrid et al.
+\cite{Astrid11} to solve the pressure equation resulting from two-phase reservoir simulation, and by Pasetto 
+et al. \cite{Pasetto16} for groundwater flow models. 
+The POD method requires the computation of a series of 'snapshots' which are solutions of the problem with slightly 
+different parameters or well inputs. 
+Once the snapshots are computed, the POD method is used to obtain a set of basis 
+vectors that capture the most relevant features of the system. These basis vectors can be used later to speed-up the subsequent simulations.\\
+Problems with a high contrast between the permeability coefficients are sometimes approached through the 
+use of deflation techniques; see, e.g., \cite{Vuik99}. The use of deflation techniques involves the search 
+of good deflation vectors, which are usually problem-dependent. 
+Following the ideas of \cite{Astrid11,Mark06,Pasetto16,Carlberg15}, we propose the use of POD of many snapshots 
+to capture the system's behavior. Furthermore, we combine this technique with deflation to accelerate the convergence of iterative methods. \\
+In this work, the basis obtained with POD is 
+studied as an alternative choice of deflation vectors 
+to accelerate the convergence of the pressure solution in reservoir simulation.  \\
+
+ \newpage
+
+ \bibliographystyle{unsrt}
+ \newpage
+ \bibliography{research}
+% 
+\newpage
+\newpage
+% \appendix
+% \section{List of notation}\label{a1}
+% 
+% \begin{table}[!h]
+% \centering
+% \begin{tabular}{c l l }
+% \hline
+% Symbol & Quantity & Unit \\[0.5ex]
+% \hline
+% $\phi$ & Rock porosity&   \\
+%  $\mathbf{K}$& Rock permeability&  $Darcy$ $(D)$ \\
+%  $c_r$& Rock compressibility&  $Pa^{-1}$ \\
+% $\mathbf{v}$ & Darcy's velocity& $ m/d$ \\
+%  $\alpha$& Geometric factor&   \\
+% $\rho$ &Fluid density &  $kg/m^3$ \\
+%  $\mu$&Fluid viscosity & $Pa \cdot s$   \\
+% ${p}$  &Pressure &  $Pa$ \\
+% $g$  &Gravity &  $m/s^2$ \\
+% $d$ & Reservoir depth&  $m$ \\
+% $c_l$ &Liquid compressibility &  $Pa^{-1}$ \\
+% $q$ &Sources &   \\
+%  %$T$&Temperature &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+%  & &   \\
+% %  & &   \\
+% \hline
+% \end{tabular}\label{table:symbols}
+% \caption{Notation}
+% \end{table}
+% \newpage
+% \section{Stopping criteria}\label{a2}
+% When we use an iterative method, we always want that our approximation is close enough 
+% to the exact solution. In other words, we want that the error \cite[pag. 42]{Saad03}: 
+% $$||\mathbf{e}^k||_2=||\mathbf{x}-\mathbf{x}^k||_2,$$ or the relative error: 
+% $$\frac{||\mathbf{x}-\mathbf{x}^k||_2}{||\mathbf{x}||_2},$$is small. \\
+% When we want to chose a stopping criteria, we could think that the relative error is a
+% good candidate, but is has the disadvantage that we need to know the exact solution to compute it.
+% What we have instead is the residual $$\mathbf{r}^k=\mathbf{b}-\mathbf{A}\mathbf{x}^k,$$ 
+% that is actually computed in each iteration of the CG method. There is a relationship between the 
+% error and the residual that can help us with the choice of the stopping criteria.
+% $$\frac{||\mathbf{x}-\mathbf{x}^k||_2}{||\mathbf{x}||_2}\leq \kappa_2(A)\frac{||\mathbf{r}^k||_2}{||\mathbf{b}||_2}.$$
+% With this relationship in mind, we can choose the stopping criteria as an $\epsilon$ for which
+% $$ \frac{||\mathbf{r}^k||_2}{||\mathbf{b}||_2}\leq \epsilon.$$
+% But we should keep to have in mind the condition number of the matrix $\mathbf{A}$, because the relative error will be bounded by:
+% $$\frac{||\mathbf{x}-\mathbf{x}^k||_2}{||\mathbf{x}||_2}\leq \kappa_2(A) \epsilon.$$
+% \section{Singular Value Decomposition for POD}\label{a3}
+% If we perform SVD in $\mathbf{X}$, we have \\
+% $\mathbf{X}=\mathbf{U}\Sigma \mathbf{V}^T, \qquad \mathbf{U}\in\mathbb{R}^{n \times n},\qquad \mathbf{\Sigma}\in\mathbb{R}^{n \times m}, \qquad \mathbf{V}\in\mathbb{R}^{m \times m}.$\\
+% Then we have 
+% \begin{itemize}
+% \begin{minipage}{.5\textwidth}
+% \item[]  $\mathbf{R}= \mathbf{X}\mathbf{X}^T$
+%  \item[] $\quad=\mathbf{U}\Sigma \mathbf{V}^T(\mathbf{U}\Sigma \mathbf{V}^T)^T$
+%  \item[] $\quad=\mathbf{U}\Sigma \mathbf{V}^T\mathbf{V}\Sigma ^T\mathbf{U}^T,$ $\mathbf{V}^T\mathbf{V}=\mathbf{I}$ 
+%   \item[] $\quad=\mathbf{U}\Lambda \mathbf{U}^T$, 
+%   $\Lambda=\Sigma\Sigma ^T \in\mathbb{R}^{n \times n}$ 
+% \end{minipage}%
+% \begin{minipage}{.4\textwidth}
+% \item[] $\mathbf{R}^T= \mathbf{X}^T\mathbf{X}$
+%  \item[] $\quad=(\mathbf{U}\Sigma \mathbf{V}^T)^T\mathbf{U}\Sigma \mathbf{V}^T$
+%  \item[] $\quad=\mathbf{V}\Sigma ^T\mathbf{U}^T\mathbf{U}\Sigma \mathbf{V}^T,$ $\mathbf{U}^T\mathbf{U}=\mathbf{I}$ 
+%   \item[] $\quad=\mathbf{V}\Lambda^T \mathbf{V}^T$, 
+%   $\Lambda^T=\Sigma ^T\Sigma \in\mathbb{R}^{m \times m}.$
+% \end{minipage}
+% \end{itemize}
+% $$\mathbf{X}=\mathbf{U}\Sigma \mathbf{V}^T$$
+% $$\mathbf{U}=\mathbf{X}\mathbf{V}\Sigma^{-1}$$
+% $$\mathbf{U}=\mathbf{X}\mathbf{V}\Lambda^{-\frac{1}{2}}$$
+% If we compute $\Lambda^T$, we can compute U as follows:
+% $$\mathbf{U}=\mathbf{X}\mathbf{V}(\Lambda^T)^{-\frac{T}{2}}=\mathbf{X}\mathbf{V}(\Lambda^T)^{\frac{1}{2}}$$
+% % \newpage
+% 
+
+
+
+\end{document}

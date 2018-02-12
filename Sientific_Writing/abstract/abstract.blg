@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: abstract.aux
+The style file: unsrt.bst
+Database file #1: /home/wagm/cortes/Localdisk/Research/bib/research.bib
+Warning--string name "august" is undefined
+--line 871 of file /home/wagm/cortes/Localdisk/Research/bib/research.bib
+Warning--I'm ignoring Astrid11's extra "pages" field
+--line 1219 of file /home/wagm/cortes/Localdisk/Research/bib/research.bib
+Warning--I'm ignoring Astrid11's extra "year" field
+--line 1223 of file /home/wagm/cortes/Localdisk/Research/bib/research.bib
+Warning--empty publisher in Saad03
+You've used 9 entries,
+            1791 wiz_defined-function locations,
+            521 strings with 5471 characters,
+and the built_in function-call counts, 1919 in all, are:
+= -- 176
+> -- 46
+< -- 0
++ -- 21
+- -- 12
+* -- 129
+:= -- 301
+add.period$ -- 28
+call.type$ -- 9
+change.case$ -- 9
+chr.to.int$ -- 0
+cite$ -- 10
+duplicate$ -- 88
+empty$ -- 221
+format.name$ -- 12
+if$ -- 428
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 10
+newline$ -- 48
+num.names$ -- 9
+pop$ -- 25
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 26
+stack$ -- 0
+substring$ -- 162
+swap$ -- 11
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 18
+width$ -- 10
+write$ -- 99
+(There were 4 warnings)
